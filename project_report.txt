@@ -23,7 +23,7 @@ Lastly, we changed the user score on the rotten tomatoes database from a decimal
 
 LOAD:
 
-To load the data, we first prepared it to load by merging the two cleaned tables together using sql language. Then, we sorted two different ways, first by the movies with the ten highest rotten tomatoes ratings, then by the movies with the ten highest IMDB ratings. 
+To load the data into a relational database, we first prepared it to load by merging the two cleaned tables together using sql language. Then, we sorted two different ways, first by the movies with the ten highest rotten tomatoes ratings, then by the movies with the ten highest IMDB ratings. 
 It is important to note at this point that the rotten tomatoes dataset is mostly comprised of ratings from industry critics, while the IMDB score is made up of non-professional user ratings--IE., individuals not directly connected with the film critique industry.
 
 Our motivation behind these transformations was a hypothetical question regarding how movie theaters could approach enticing customers back into the theaters once covid restrictions lift and theater operations can resume as normal. 
