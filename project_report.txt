@@ -1,0 +1,35 @@
+Project report: Kristy Allred, Chris Ballard, Andrea Vaughn, Pat Petrus
+
+EXTRACT:
+
+For our project, we chose to use resources from Kaggle.com and DataWorld. Our topic of choice was movies, specifically rotton tomatoes ratings and IMDB critical review scores. 
+Our data was located on the following websites and extracted as CSVs:
+rotton tomatoes dataset: https://www.kaggle.com/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset
+kaggle: https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset
+
+
+
+TRANSFORM:
+
+For our transformations, we first imported our CSVs into pandas. Next, we pruned extraneous data from our IMDB database, leaving only a movie's original title, average voter score out of ten, and the movie's gross income in the United States market. 
+Next, we performed similar transformations to our rotten tomatoes to include only database rank, title, rating, and genre.
+For both datasets, we cleaned mismatched title case and removed unnecesary underscores to ensure good matches for future merging. 
+
+Our first major formatting issue came in the form of movie publication years placed in the "title" column, which needed to be removed. We performed this necessary cleaning function by using a string split function to drop the year from each title column. 
+
+Lastly, we changed the user score on the rotten tomatoes database from a decimal point 1-to-10 scale to a whole number 1-to-100 scale. We did this by iterating through the column "user score" and multiplying each value by ten. This gave us a 1-to-100 value which matched the rotten tomatoes database. 
+
+
+
+LOAD:
+
+To load the data, we first prepared it to load by merging the two cleaned tables together using sql language. Then, we sorted two different ways, first by the movies with the ten highest rotten tomatoes ratings, then by the movies with the ten highest IMDB ratings. 
+It is important to note at this point that the rotten tomatoes dataset is mostly comprised of ratings from industry critics, while the IMDB score is made up of non-professional user ratings--IE., individuals not directly connected with the film critique industry.
+
+Our motivation behind these transformations was a hypothetical question regarding how movie theaters could approach enticing customers back into the theaters once covid restrictions lift and theater operations can resume as normal. 
+What are the most popular movies according to both critics and casual fans? And what kind of box office numbers back these ratings up? 
+By comparing rankings from multiple datasets as well as gross box office sales, a hypothetical theater could single out particularly popular and highest-grossing films to present as part of a "welcome back to the movies" marketing campaign. 
+
+Interestingly, the silver-screen classic "12 Angry Men" appears on both the top ten IMDB and Rotten Tomatoes lists. Any hypothetical theater trying to draw in wary moviegoers would do well to add this movie to its lineup of films!
+
+Broadly speaking, the reason we chose this particular dataset was as a palatte cleanser from all the mountains of covid data we would have otherwise been consigned to troll through. 
